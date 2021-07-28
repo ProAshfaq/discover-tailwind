@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin Fashion</title>
+    <!-- tailwind css -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="">
+        <div class="w-full text-gray-700 bg-yellow-100 dark-mode:text-gray-200 dark-mode:bg-gray-800 fixed">
+            <div x-data="{ open: false }"
+                class="flex flex-col  px-4 mx-auto md:items-center md:justify-between md:flex-row">
+                <div class="p-4 flex flex-row items-center justify-between">
+                    <a href="#"
+                        class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><img
+                            src="icons/Group 33072.png" class="w-80" alt=""></a>
+                    <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                            <path x-show="!open" fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                            <path x-show="open" fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav :class="{'flex': open, 'hidden': !open}"
+                    class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 rounded-lg dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0"
+                        href="#home">Home</a>
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 rounded-lg dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0"
+                        t" href="#woman">Woman</a>
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 rounded-lg dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0""
+                        href=" #man">Man</a>
+                    <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 rounded-lg dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0""
+                        href=" #info">Information</a>
+                </nav>
+            </div>
+        </div>
+        <section class="lg:bg-yellow-100">
+            <section class="container lg:flex items-center justify-around pt-28 pb-16 px-4">
+                <div class="space-y-4">
+                    <h1 class="text-7xl font-bold uppercase">
+                        <span class="text-yellow-400">Be the penguins</span>
+                        <br>
+                        <span class="text-gray-800">of winter</span>
+                    </h1>
+                    <p class="w-2/3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae deserunt non
+                        similique
+                        rem
+                        consequuntur.
+                        Quasi.</p>
+                    <button
+                        class="text-white uppercase px-7 py-4 bg-green-400 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                                d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                        </svg>
+                        Buy Now</button>
+                </div>
+                <div>
+                    <img src="images/model.png" alt="model">
+                </div>
+
+            </section>
+        </section>
+    </header>
+    <main>
+        <!-- woman jacket section -->
+        <section id="woman" class="container px-4 mx-auto my-12">
+            <h2 class="text-4xl uppercase text-gray-800 font-bold mb-4">Woman Jacket</h2>
+            <!-- woman jacket container -->
+            <div class="grid lg:grid-cols-3 gap-7">
+                <!-- single coat item -->
+                <div class="shadow-lg rounded-2xl p-4 space-y-4">
+                    <div class="bg-gray-200 rounded-2xl py-6">
+                        <img class="h-72  mx-auto" src="images/jacket-1.png" alt="">
+                    </div>
+                    <h4 class="text-3xl font-bold">Yellow Coat Jacket</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, natus!</p>
+                    <div class="lg:flex justify-between">
+                        <h2 class="text-5xl font-black text-yellow-400 mb-4">$234</h2>
+                        <button
+                            class="text-white uppercase px-7 py-4 bg-green-400 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                            </svg>
+                            Buy Now</button>
+                    </div>
+                </div>
+                <!-- single coat item -->
+                <div class="shadow-lg rounded-2xl p-4 space-y-4">
+                    <div class="bg-gray-200 rounded-2xl py-6">
+                        <img class="h-72 mx-auto" src="images/jacket-2.png" alt="">
+                    </div>
+                    <h4 class="text-3xl font-bold">Yellow Coat Jacket</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, natus!</p>
+                    <div class="lg:flex justify-between">
+                        <h2 class="text-5xl font-black text-yellow-400 mb-4">$234</h2>
+                        <button
+                            class="text-white uppercase px-7 py-4 bg-green-400 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                            </svg>
+                            Buy Now</button>
+                    </div>
+                </div>
+                <!-- single coat item -->
+                <div class="shadow-lg rounded-2xl p-4 space-y-4">
+                    <div class="bg-gray-200 rounded-2xl py-6">
+                        <img class="h-72 mx-auto" src="images/jacket-3.png" alt="">
+                    </div>
+                    <h4 class="text-3xl font-bold">Yellow Coat Jacket</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, natus!</p>
+                    <div class="lg:flex justify-between">
+                        <h2 class="text-5xl font-black text-yellow-400 mb-4">$234</h2>
+                        <button
+                            class="text-white uppercase px-7 py-4 bg-green-400 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                            </svg>
+                            Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- man jacket section -->
+        <section id="man" class="container px-4 mx-auto my-12">
+            <h2 class="text-4xl uppercase text-gray-800 font-bold mb-4">Woman Jacket</h2>
+            <!-- man jacket container -->
+            <div class="grid lg:grid-cols-3 gap-7">
+                <!-- single coat item -->
+                <div class="shadow-lg rounded-2xl p-4 space-y-4">
+                    <div class="bg-gray-200 rounded-2xl py-6">
+                        <img class="h-72 mx-auto" src="images/jacket-4.png" alt="">
+                    </div>
+                    <h4 class="text-3xl font-bold">Snowboard Jacket Mens</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, natus!</p>
+                    <div class="lg:flex justify-between">
+                        <h2 class="text-5xl font-black text-yellow-400 mb-4">$234</h2>
+                        <button
+                            class="text-white uppercase px-7 py-4 bg-green-400 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                            </svg>
+                            Buy Now</button>
+                    </div>
+                </div>
+                <!-- single coat item -->
+                <div class="shadow-lg rounded-2xl p-4 space-y-4">
+                    <div class="bg-gray-200 rounded-2xl py-6">
+                        <img class="h-72 mx-auto" src="images/jacket-5.png" alt="">
+                    </div>
+                    <h4 class="text-3xl font-bold">Man Leather Jackets</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, natus!</p>
+                    <div class="lg:flex justify-between">
+                        <h2 class="text-5xl font-black text-yellow-400 mb-4">$234</h2>
+                        <button
+                            class="text-white uppercase px-7 py-4 bg-green-400 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                            </svg>
+                            Buy Now</button>
+                    </div>
+                </div>
+                <!-- single coat item -->
+                <div class="shadow-lg rounded-2xl p-4 space-y-4">
+                    <div class="bg-gray-200 rounded-2xl py-6">
+                        <img class="h-72 mx-auto" src="images/jacket-6.png" alt="">
+                    </div>
+                    <h4 class="text-3xl font-bold">Man Casual Jackets</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere, natus!</p>
+                    <div class="lg:flex justify-between">
+                        <h2 class="text-5xl font-black text-yellow-400 mb-4">$234</h2>
+                        <button
+                            class="text-white uppercase px-7 py-4 bg-green-400 rounded-xl font-medium bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                            </svg>
+                            Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- features section -->
+        <section id="info" class="container px-4 mx-auto my-12 grid lg:grid-cols-2 gap-5">
+            <div class="flex items-center py-8 pl-8 shadow-lg rounded-2xl">
+                <div class="">
+                    <img src="icons/image 12.png" class="w-24" alt="">
+                </div>
+                <div class="pl-8">
+                    <h2 class="font-bold text-4xl pb-2 text-gray-600">Find the Perfect Fit</h2>
+                    <p class="text-gray-600	">Everybody is different, which is why we
+                        offer styles for every body.</p>
+                </div>
+            </div>
+            <div class="lg:row-span-3 my-auto">
+                <img src="images/shopping.png" alt="">
+            </div>
+            <div class="flex items-center py-8 pl-8 shadow-lg  rounded-2xl">
+                <div class="">
+                    <img src="icons/image 12.png" class="w-24" alt="">
+                </div>
+                <div class="pl-8">
+                    <h2 class="font-bold text-4xl pb-2 text-gray-600">Find the Perfect Fit</h2>
+                    <p class="text-gray-600	">Everybody is different, which is why we
+                        offer styles for every body.</p>
+                </div>
+            </div>
+            <div class="flex items-center py-8 pl-8 shadow-lg  rounded-2xl">
+                <div class="">
+                    <img src="icons/image 12.png" class="w-24" alt="">
+                </div>
+                <div class="pl-8">
+                    <h2 class="font-bold text-4xl pb-2 text-gray-600">Find the Perfect Fit</h2>
+                    <p class="text-gray-600	">Everybody is different, which is why we
+                        offer styles for every body.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+    <footer class="text-center py-6">
+        <p>&copy; 2021 | Ashfaq Ibn Main | All rights reserved.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+</body>
+
+</html>
